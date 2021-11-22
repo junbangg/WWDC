@@ -38,7 +38,7 @@
     - 부모 클래스가 저장 속성이 있을지도 모른다.
         - 그러면 다 받아오고
         - 다 저장하고 initialize 해야한다
-    - 뭐를 override 해야될지, 그리고 언제 하면 안되는지 판단해야된다.
+    - 뭐를 `override` 해야될지, 그리고 언제 하면 안되는지 판단해야된다.
 
 **이래서 Delegate Pattern 사용**
 
@@ -73,7 +73,7 @@
     ```
     
 - 이렇게 비교 가능한 타입을 만드려고 해도, `other` 는 `value` 가 있는지 없는지 알 수가 없다.
-- 그래서 downcast 를 해줘야한다.
+- 그래서 `downcast` 를 해줘야한다.
     - `(other as! Number).value`
 - **결론은 더 좋은 Abstraction mechanism 이 필요하다**
 
