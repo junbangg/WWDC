@@ -1,3 +1,5 @@
+# WWDC 2015/ Protocol Oriented Programming in Swift
+
 ## 타입(클래스, 구조체, 열거형)이 좋은 점
 
 - Encapsulation
@@ -21,7 +23,9 @@
     - A와 B 가 공유하는 데이터의 변경이 초래할 수 있는 문제점들( **임계영역** 문제)
     - 이러면  해결하기위해 **Lock** 같은 방법을 사용하는데, 그러면 코드가 점점 비효율적으로 변함
 
-![Screen Shot 2021-11-13 at 5.20.40 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/383a6dd6-9603-4837-b4cf-96e94a94887f/Screen_Shot_2021-11-13_at_5.20.40_PM.png)
+<img width="1132" alt="Screen Shot 2021-11-13 at 5 20 40 PM" src="https://user-images.githubusercontent.com/33091784/141953876-df962cff-d750-438f-9f87-bfcafb4ac587.png">
+
+
 
 - **이래서 스위프트의 Collection 타입들은 전부 값 타입이다**
 - "The one you're iterating and the one you're modifying are distinct"
@@ -34,7 +38,7 @@
     - 부모 클래스가 저장 속성이 있을지도 모른다.
         - 그러면 다 받아오고
         - 다 저장하고 initialize 해야한다
-    - 뭐를 override 해야될지, 그리고 언제 하면 안되는지 판단해야된다.
+    - 뭐를 `override` 해야될지, 그리고 언제 하면 안되는지 판단해야된다.
 
 **이래서 Delegate Pattern 사용**
 
@@ -69,7 +73,7 @@
     ```
     
 - 이렇게 비교 가능한 타입을 만드려고 해도, `other` 는 `value` 가 있는지 없는지 알 수가 없다.
-- 그래서 downcast 를 해줘야한다.
+- 그래서 `downcast` 를 해줘야한다.
     - `(other as! Number).value`
 - **결론은 더 좋은 Abstraction mechanism 이 필요하다**
 
@@ -157,7 +161,8 @@ func binarySearch<T: Ordered>(sortedKeys: [T], forKey k: T) -> Int {
 
 "homogeneous array" 를 받도록 한것이다. (`Ordered` 를 채택하는 다양한 타입으로 구성된 array)
 
-![Screen Shot 2021-11-13 at 5.59.28 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3564d9e7-407c-4fb3-8b99-8bf9138b3ade/Screen_Shot_2021-11-13_at_5.59.28_PM.png)
+<img width="1172" alt="Screen Shot 2021-11-13 at 5 59 28 PM" src="https://user-images.githubusercontent.com/33091784/141953905-c7a07d12-6b2f-4a57-b8d6-2cbbc7238ff2.png">
+
 
 - dynamic dispatch vs static dispatch 는 polymorphism 이야기이다.
 
